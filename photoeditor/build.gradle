@@ -6,20 +6,19 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'photoeditor'
 
-    publishedGroupId = 'ja.burhanrashid52'
+    publishedGroupId = 'ja.sonu'
     libraryName = 'PhotoEditor'
     artifact = 'photoeditor'
 
     libraryDescription = 'A Photo Editor library to edit image using paints,text,emoji and images'
 
-    siteUrl = 'https://github.com/burhanrashid52/PhotoEditor'
-    gitUrl = 'https://github.com/burhanrashid52/PhotoEditor'
+  
 
     libraryVersion = '0.3.3'
 
-    developerId = 'burhanrashid52'
-    developerName = 'Burhanuddin Rashid'
-    developerEmail = 'burhanrashid5253@gmail.com'
+    developerId = 'sonu'
+    developerName = 'sonu'
+    developerEmail = 'sonumolvarghese94@gmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
