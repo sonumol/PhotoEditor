@@ -1,10 +1,11 @@
-package com.burhanrashid52.imageeditor;
+package com.example.imageeditor;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Matrix;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,16 +20,18 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.burhanrashid52.imageeditor.base.BaseActivity;
-import com.burhanrashid52.imageeditor.filters.FilterListener;
-import com.burhanrashid52.imageeditor.filters.FilterViewAdapter;
-import com.burhanrashid52.imageeditor.tools.EditingToolsAdapter;
-import com.burhanrashid52.imageeditor.tools.ToolType;
+import com.example.imageeditor.base.BaseActivity;
+import com.example.imageeditor.filters.FilterListener;
+import com.example.imageeditor.filters.FilterViewAdapter;
+import com.example.imageeditor.tools.EditingToolsAdapter;
+import com.example.imageeditor.tools.ToolType;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,6 +47,7 @@ public class EditImageActivity extends BaseActivity implements OnPhotoEditorList
         View.OnClickListener,
         PropertiesBSFragment.Properties,
         EmojiBSFragment.EmojiListener,
+
         StickerBSFragment.StickerListener, EditingToolsAdapter.OnItemSelected, FilterListener {
 
     private static final String TAG = EditImageActivity.class.getSimpleName();
@@ -54,7 +58,10 @@ public class EditImageActivity extends BaseActivity implements OnPhotoEditorList
     private PhotoEditorView mPhotoEditorView;
     private PropertiesBSFragment mPropertiesBSFragment;
     private EmojiBSFragment mEmojiBSFragment;
+    private MyCustomImageView customimageview;
     private StickerBSFragment mStickerBSFragment;
+    private CanvasFragment mcanvasfragment ;
+
     private TextView mTxtCurrentTool;
     private Typeface mWonderFont;
     private RecyclerView mRvTools, mRvFilters;
@@ -135,6 +142,7 @@ public class EditImageActivity extends BaseActivity implements OnPhotoEditorList
 
         imgClose = findViewById(R.id.imgClose);
         imgClose.setOnClickListener(this);
+
 
     }
 
@@ -287,8 +295,11 @@ public class EditImageActivity extends BaseActivity implements OnPhotoEditorList
 
     @Override
     public void onEmojiClick(String emojiUnicode) {
+
         mPhotoEditor.addEmoji(emojiUnicode);
         mTxtCurrentTool.setText(R.string.label_emoji);
+//        Animation animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
+//        img.startAnimation(animZoomIn);
 
     }
 
@@ -367,6 +378,12 @@ public class EditImageActivity extends BaseActivity implements OnPhotoEditorList
                 break;
             case STICKER:
                 mStickerBSFragment.show(getSupportFragmentManager(), mStickerBSFragment.getTag());
+                break;
+            case CANVAS:
+               // mcanvasfragment.show(getSupportFragmentManager(), mcanvasfragment.getTag());
+                break;
+            case FILL:
+              //  mStickerBSFragment.show(getSupportFragmentManager(), mStickerBSFragment.getTag());
                 break;
         }
     }

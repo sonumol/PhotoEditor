@@ -1,4 +1,4 @@
-package com.burhanrashid52.imageeditor.tools;
+package com.example.imageeditor.tools;
 
 import android.support.annotation.NonNull;
 import android.support.v4.util.Pair;
@@ -9,16 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.burhanrashid52.imageeditor.R;
+import com.example.imageeditor.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author <a href="https://github.com/burhanrashid52">Burhanuddin Rashid</a>
- * @version 0.1.2
- * @since 5/23/2018
- */
+
 public class EditingToolsAdapter extends RecyclerView.Adapter<EditingToolsAdapter.ViewHolder> {
 
     private List<ToolModel> mToolList = new ArrayList<>();
@@ -30,8 +26,10 @@ public class EditingToolsAdapter extends RecyclerView.Adapter<EditingToolsAdapte
         mToolList.add(new ToolModel("Text", R.drawable.ic_text, ToolType.TEXT));
         mToolList.add(new ToolModel("Eraser", R.drawable.ic_eraser, ToolType.ERASER));
         mToolList.add(new ToolModel("Filter", R.drawable.ic_photo_filter, ToolType.FILTER));
-        mToolList.add(new ToolModel("Emoji",R.drawable.ic_brush,ToolType.EMOJI));
-        mToolList.add(new ToolModel("Sticker",R.drawable.ic_brush,ToolType.STICKER));
+        mToolList.add(new ToolModel("Emoji",R.drawable.ic_sticker,ToolType.EMOJI));
+        mToolList.add(new ToolModel("Sticker",R.drawable.ic_sticker,ToolType.STICKER));
+        mToolList.add(new ToolModel("Canvas",R.drawable.ic_sticker,ToolType.CANVAS));
+        mToolList.add(new ToolModel("Fill",R.drawable.ic_sticker,ToolType.FILL));
 
     }
 

@@ -14,11 +14,7 @@ import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.Log;
 
-/**
- * @author <a href="https://github.com/burhanrashid52">Burhanuddin Rashid</a>
- * @version 0.1.2
- * @since 5/21/2018
- */
+
 class FilterImageView extends AppCompatImageView {
 
     private OnImageChangedListener mOnImageChangedListener;

@@ -2,11 +2,7 @@ package ja.burhanrashid52.photoeditor;
 
 import android.graphics.Bitmap;
 
-/**
- * @author <a href="https://github.com/burhanrashid52">Burhanuddin Rashid</a>
- * @since 8/8/2018
- * Builder Class to apply multiple save options
- */
+
 public class SaveSettings {
     private boolean isTransparencyEnabled;
     private boolean isClearViewsEnabled;

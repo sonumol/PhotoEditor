@@ -28,16 +28,9 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>
- * This class in initialize by {@link PhotoEditor.Builder} using a builder pattern with multiple
- * editing attributes
- * </p>
- *
- * @author <a href="https://github.com/burhanrashid52">Burhanuddin Rashid</a>
- * @version 0.1.1
- * @since 18/01/2017
- */
+import ja.example.photoeditor.R;
+
+
 public class PhotoEditor implements BrushViewChangeListener {
 
     private static final String TAG = "PhotoEditor";

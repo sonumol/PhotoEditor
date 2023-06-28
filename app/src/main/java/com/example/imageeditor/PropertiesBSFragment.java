@@ -1,4 +1,4 @@
-package com.burhanrashid52.imageeditor;
+package com.example.imageeditor;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

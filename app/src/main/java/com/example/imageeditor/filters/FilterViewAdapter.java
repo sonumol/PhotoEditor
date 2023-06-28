@@ -1,4 +1,4 @@
-package com.burhanrashid52.imageeditor.filters;
+package com.example.imageeditor.filters;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.burhanrashid52.imageeditor.R;
+import com.example.imageeditor.R;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,11 +22,7 @@ import java.util.List;
 
 import ja.burhanrashid52.photoeditor.PhotoFilter;
 
-/**
- * @author <a href="https://github.com/burhanrashid52">Burhanuddin Rashid</a>
- * @version 0.1.2
- * @since 5/23/2018
- */
+
 public class FilterViewAdapter extends RecyclerView.Adapter<FilterViewAdapter.ViewHolder> {
 
     private FilterListener mFilterListener;

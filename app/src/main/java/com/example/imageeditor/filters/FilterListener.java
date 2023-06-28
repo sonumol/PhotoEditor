@@ -1,4 +1,4 @@
-package com.burhanrashid52.imageeditor.filters;
+package com.example.imageeditor.filters;
 
 import ja.burhanrashid52.photoeditor.PhotoFilter;
 

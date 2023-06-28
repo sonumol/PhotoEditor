@@ -1,4 +1,4 @@
-package com.burhanrashid52.imageeditor;
+package com.example.imageeditor;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -20,9 +20,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by Burhanuddin Rashid on 1/16/2018.
- */
+
 
 public class TextEditorDialogFragment extends DialogFragment {
 
